@@ -26,6 +26,7 @@ def InitialInspect(data_frame):
     print("Columns data types:\n", data_frame.dtypes)
     print('=' * 50)
 
+
     print("Missing value counts: ")
     for column in data_frame: 
         NullCount = data_frame[column].isnull().sum()
@@ -38,7 +39,7 @@ def InitialInspect(data_frame):
         print(f"{column}: {DuplicateCount} duplicates.")
     print('=' * 50)
 
-    print(".describe summary:")
+    print("The .describe summary:")
     display(data_frame.describe())
     print("=" * 50)
 
@@ -46,3 +47,11 @@ def InitialInspect(data_frame):
     display(data_frame.head(10))
     print("=" * 50)
 
+
+
+# Not currently working 
+# def ValueCounter(*columns):
+#     for column in columns:
+#         print("\nValue counts: ")
+#         print([column].value_counts(dropna=False))
+#         print("-" * 50)
