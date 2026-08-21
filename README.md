@@ -48,7 +48,7 @@ Datasets contain records of 782 earthquakes from 1/1/2001 to 1/1/2023. The meani
 
 ## Business Requirements
 
-* Risk and preventative aid companies want to know how to better identify, and predict high severity earthquake events as well as how to identify ones that can/will cause a tsunami, so that their time and resources can more effectively allocated.   
+* Humanitarian Aid and Disaster Response organisations need to be able to classify and predict high severity earthquake events, as well which characteristics lead to tsunami generation, to enable more effecient operational planning and resource allocation.   
 
 ## Hypothesis and how to validate?
 
@@ -56,11 +56,35 @@ Datasets contain records of 782 earthquakes from 1/1/2001 to 1/1/2023. The meani
 H1 - Magnitude and Depth
    * Earthquake magnitude and focal depth are paired predictors for high severity events, where higher magnitudes and shallower depths result in greater surface impact.  
 
+   * Validaiton: 
+   Visualise the relationships between magnitude and depth against the surface shaking (mmi).
+
+   Pearson Correlation test to measure any direct linearity
+
+   Linear Regression to test the significance
+
+
 H2 - Tsunami Generating Characteristics
    * Earthquakes that generate a tsunami occur at significantly lower focal depths and are triggered by specific fault mechanisms (magType), as apposed to ones that don't.    
 
+   * Validation:
+   Visualise confirmed tsnuami generation agasint depth to see how they correlate
+
+   2 sample T-test/Mann-Whitney U Test on the average depth for tsunami generators and non generators
+
+   Chi-Square Test for the fault mechanism types against the confirmed tsunami generators to confirm whether a certain type is more responsible than others
+
+
 H3 - Classification and Predicitons
    * Machine learning models that are trained soley on the immediate, real-time seismic traits (magnitude, depth, latitude, longitude, magType) can accurately classify high severity events before the crowdsourced data becomes available. Resulting in swifter repsonse allocation.
+
+   * Validation:
+   Engineer a classification target in binary (0 low severity, 1 high severity) based on a decided threshold rule (currently looking at an mmi >= 7).
+
+   Make a dataset with only the real-time variables (magnitude, depth, latitude, longitude, magType) to prevent data leakage.
+
+   Train a Logistic Regression model and a Random Forest model for comparison. Calculate the Recall score on the test data for an evaluation on it performance, aiming for an 85% accuracte prediction rate.          
+
 
 ## Project Plan
 
