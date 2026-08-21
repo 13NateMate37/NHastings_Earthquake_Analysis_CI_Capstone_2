@@ -2,19 +2,7 @@
 
 # Earthquake Analysis
 
-**Earthquake Analysis** is a dive into probing what makes an earthquake impactful.
-
-With multiple factors and measurements, 
-
-Magnitude - Measure for the size and energy release of the earthquake (rated typically from 2-7+,), 
-MMI (Modified Mercalli Intensity) - Measure (1-12) for the localised activity and shaking effect, 
-CDI - Feedback based, reports from the people experiencing it and their loaction for relative assessment,
-SIG,
-Depth,
-
-We'll look into which of these contribute to an earthquakes total Impact rating and 
-delve into whether we can use standout factors to see if we can predict and to what 
-accuracy level for informing  the distribution of aid and preventative measures.
+**Earthquake Analysis** 
 
 
 ## Dataset Content
@@ -50,6 +38,7 @@ Datasets contain records of 782 earthquakes from 1/1/2001 to 1/1/2023. The meani
 
 * Humanitarian Aid and Disaster Response organisations need to be able to classify and predict high severity earthquake events, as well which characteristics lead to tsunami generation, to enable more effecient operational planning and resource allocation.   
 
+
 ## Hypothesis and how to validate?
 
 
@@ -57,33 +46,31 @@ H1 - Magnitude and Depth
    * Earthquake magnitude and focal depth are paired predictors for high severity events, where higher magnitudes and shallower depths result in greater surface impact.  
 
    * Validaiton: 
-   Visualise the relationships between magnitude and depth against the surface shaking (mmi).
-
-   Pearson Correlation test to measure any direct linearity
-
-   Linear Regression to test the significance
+   
+    - Visualise the relationships between magnitude and depth against the surface shaking (mmi)
+    - Pearson Correlation test to measure any direct linearity
+    - Linear Regression to test the significance
 
 
 H2 - Tsunami Generating Characteristics
    * Earthquakes that generate a tsunami occur at significantly lower focal depths and are triggered by specific fault mechanisms (magType), as apposed to ones that don't.    
 
    * Validation:
-   Visualise confirmed tsnuami generation agasint depth to see how they correlate
-
-   2 sample T-test/Mann-Whitney U Test on the average depth for tsunami generators and non generators
-
-   Chi-Square Test for the fault mechanism types against the confirmed tsunami generators to confirm whether a certain type is more responsible than others
+   
+   - Visualise confirmed tsnuami generation agasint depth to see how they correlate
+   - 2 sample T-test/Mann-Whitney U Test on the average depth for tsunami generators and non generators
+   - Chi-Square Test for the fault mechanism types against the confirmed tsunami generators to confirm whether a certain type is more
+   responsible than others
 
 
 H3 - Classification and Predicitons
    * Machine learning models that are trained soley on the immediate, real-time seismic traits (magnitude, depth, latitude, longitude, magType) can accurately classify high severity events before the crowdsourced data becomes available. Resulting in swifter repsonse allocation.
 
    * Validation:
-   Engineer a classification target in binary (0 low severity, 1 high severity) based on a decided threshold rule (currently looking at an mmi >= 7).
-
-   Make a dataset with only the real-time variables (magnitude, depth, latitude, longitude, magType) to prevent data leakage.
-
-   Train a Logistic Regression model and a Random Forest model for comparison. Calculate the Recall score on the test data for an evaluation on it performance, aiming for an 85% accuracte prediction rate.          
+   
+   - Engineer a classification target in binary (0 low severity, 1 high severity) based on a decided threshold rule (currently looking at an mmi >= 7).
+   - Make a dataset with only the real-time variables (magnitude, depth, latitude, longitude, magType) to prevent data leakage
+   - Train a Logistic Regression model as a baseline and a Random Forest model for comparison. Calculate the Recall score on the test data for an evaluation on it performance, aiming for an 85% accuracte prediction rate.          
 
 
 ## Project Plan
@@ -92,9 +79,11 @@ H3 - Classification and Predicitons
 * How was the data managed throughout the collection, processing, analysis and interpretation steps?
 * Why did you choose the research methodologies you used?
 
+
 ## The rationale to map the business requirements to the Data Visualisations
 
 * List your business requirements and a rationale for mapping them to the Data Visualisations
+
 
 ## Analysis techniques used
 
