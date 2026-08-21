@@ -47,9 +47,9 @@ H1 - Magnitude and Depth
 
    * Validaiton: 
    
-    - Visualise the relationships between magnitude and depth against the surface shaking (mmi)
-    - Pearson Correlation test to measure any direct linearity
-    - Linear Regression to test the significance
+   - Visualise the relationships between magnitude and depth against the surface shaking (mmi)
+   - Pearson Correlation test to measure any direct linearity
+   - Linear Regression to test the significance
 
 
 H2 - Tsunami Generating Characteristics
