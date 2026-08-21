@@ -48,18 +48,19 @@ Datasets contain records of 782 earthquakes from 1/1/2001 to 1/1/2023. The meani
 
 ## Business Requirements
 
-* Risk and preventitive aid companies want to know how to better indentify, and predict high impact 
-earthquake events as well as how to identify ones that can/will cause a tsunami, so that their time  
- and resources can more effectively alloacted.   
+* Risk and preventative aid companies want to know how to better identify, and predict high severity earthquake events as well as how to identify ones that can/will cause a tsunami, so that their time and resources can more effectively allocated.   
 
 ## Hypothesis and how to validate?
 
-H1 - Is Magnitude significantly associated with an earthquakes impact?
 
-H2 - Do tusnami associated earthquakes have different characteristics with non-tsunami earthquakes?
+H1 - Magnitude and Depth
+   * Earthquake magnitude and focal depth are paired predictors for high severity events, where higher magnitudes and shallower depths result in greater surface impact.  
 
-H3 - Which if any characteristic(s) can be used to make accurate impact predictions
+H2 - Tsunami Generating Characteristics
+   * Earthquakes that generate a tsunami occur at significantly lower focal depths and are triggered by specific fault mechanisms (magType), as apposed to ones that don't.    
 
+H3 - Classification and Predicitons
+   * Machine learning models that are trained soley on the immediate, real-time seismic traits (magnitude, depth, latitude, longitude, magType) can accurately classify high severity events before the crowdsourced data becomes available. Resulting in swifter repsonse allocation.
 
 ## Project Plan
 
