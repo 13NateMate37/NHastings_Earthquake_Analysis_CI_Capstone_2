@@ -2,7 +2,7 @@
 
 # Earthquake Analysis
 
-**Earthquake Analysis** 
+**Earthquake Analysis** aims to provide insight into what is a high severity earthquake,   
 
 
 ## Dataset Content
