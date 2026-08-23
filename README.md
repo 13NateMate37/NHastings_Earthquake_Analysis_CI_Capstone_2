@@ -2,7 +2,13 @@
 
 # Earthquake Analysis
 
-**Earthquake Analysis** aims to provide insight into what is a high severity earthquake,   
+**Earthquake Analysis** is an introspective analysis of the thresholds of earthquake events, their classification and 
+which combinations of their features need to be recognised as high severity. 
+
+A high magnitude earthquake doesn't necessarily mean all that much if it happens far away from the surface as the 
+energy is absorbed over the time it travels; a magnitude 4 event happening at a shallow depths could inflict 
+compairable effects to a 7 that was happening deeper down.
+    
 
 
 ## Dataset Content
@@ -69,7 +75,7 @@ H3 - Classification and Predicitons
    * Validation:
    
    - Engineer a classification target in binary (0 low severity, 1 high severity) based on a decided threshold rule (currently looking at an mmi >= 7).
-   - Make a dataset with only the real-time variables (magnitude, depth, latitude, longitude, magType) to prevent data leakage
+   - Test a feature set of the immediate real-time aspects ("magnitude, depth, latitude, longitude, magType") to predict severity. Dropping post event calculate classification as that will act as a cheatsheet. 
    - Train a Logistic Regression model as a baseline and a Random Forest model for comparison. Calculate the Recall score on the test data for an evaluation on it performance, aiming for an 85% accuracte prediction rate.          
 
 
