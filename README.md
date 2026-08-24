@@ -49,13 +49,15 @@ Datasets contain records of 782 earthquakes from 1/1/2001 to 1/1/2023. The meani
 
 
 H1 - Magnitude and Depth
-   * Earthquake magnitude and focal depth are paired predictors for high severity events, where higher magnitudes and shallower depths result in greater surface impact.  
+   * Earthquake magnitude and focal depth operate as statistically independent features, meaning focal depth cannot serve as an indicator of magnitude when classifying high-severity.
+
 
    * Validaiton: 
    
    - Visualise the relationships between magnitude and depth against the surface shaking (mmi)
-   - Pearson Correlation test to measure any direct linearity
-   - Linear Regression to test the significance
+   - Pearson and Spearman correlation tests 
+   - Multivariate Regression against mmi
+
 
 
 H2 - Tsunami Generating Characteristics
