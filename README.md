@@ -70,12 +70,12 @@ H2 - Tsunami Generating Characteristics
 
 
 H3 - Classification and Predicitons
-   * Machine learning models that are trained solely on the immediate, real-time seismic traits (magnitude, depth, latitude, longitude, magType) can accurately classify high severity events before the crowdsourced data becomes available. Resulting in swifter repsonse allocation.
+   * Machine learning models that are trained solely on the immediate, real-time seismic traits (magnitude, depth, latitude, longitude, magType) can accurately classify high severity events before the crowdsourced data becomes available. Resulting in swifter repsonse allocation
 
    * Validation:
    
-   - Engineer a classification target in binary (0 low severity, 1 high severity) based on a decided threshold rule (currently looking at an mmi >= 7).
-   - Test a feature set of the immediate real-time aspects ("magnitude, depth, latitude, longitude, magType") to predict severity. Dropping post event calculate classification as that will act as a cheatsheet. 
+   - Engineer a classification target in binary (0 low severity, 1 high severity) based on a decided threshold rule
+   - Test a feature set of the immediate real-time aspects ("magnitude, depth, latitude, longitude, magType") to predict severity.Dropping post event calculate classification as that will act as a cheatsheet. 
    - Train a Logistic Regression model as a baseline and a Random Forest model for comparison. Calculate the Recall score on the test data for an evaluation on it performance, aiming for an 85% accuracte prediction rate.          
 
 
