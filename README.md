@@ -53,14 +53,13 @@ H1 - Magnitude and Depth
 
    * Validaiton: 
    
-   - Visualise the relationships between magnitude and depth against the surface shaking (mmi)
-   - Pearson and Spearman correlation tests 
-   - Multivariate Regression against mmi
+   - Pearson Correlation and Spearman Rank correlation tests 
+   - Visualise the relationships between magnitude and depth and then check them against the localised intensity (mmi)
 
 
 
 H2 - Tsunami Generating Characteristics
-   * Earthquakes that generate a tsunami occur at significantly lower focal depths and are triggered by specific fault mechanisms (magType), as apposed to ones that don't.    
+   * Earthquakes that generate a tsunami occur at significantly lower focal depths and are triggered by specific fault mechanisms (magType), as opposed to ones that don't.    
 
    * Validation:
    
@@ -71,7 +70,7 @@ H2 - Tsunami Generating Characteristics
 
 
 H3 - Classification and Predicitons
-   * Machine learning models that are trained soley on the immediate, real-time seismic traits (magnitude, depth, latitude, longitude, magType) can accurately classify high severity events before the crowdsourced data becomes available. Resulting in swifter repsonse allocation.
+   * Machine learning models that are trained solely on the immediate, real-time seismic traits (magnitude, depth, latitude, longitude, magType) can accurately classify high severity events before the crowdsourced data becomes available. Resulting in swifter repsonse allocation.
 
    * Validation:
    
