@@ -88,9 +88,20 @@ H3 - Classification and Predicitons
 
 * Dashboard - Choose a platform create a dashbaord for the project
 
-## The rationale to map the business requirements to the Data Visualisations
-THIS NEEDS TO BE DONE
 
+## The rationale to map the business requirements to the Data Visualisations
+
+### Investigate the Relationship Between Earthquake Magnitude and Depth
+* Visualisations: Distribution plots and magnitude vs depth scatter plot.  
+- Rationale: Distribution plots show the spread of each variable, while the scatter plot allows patterns and relationships between magnitude and depth to be identified.
+
+### Investigate Earthquake Characteristics Associated with Tsunami Occurrence
+* Visualisations: Depth box plot, magnitude type bar plot and magnitude/depth scatter plot by tsunami status.  
+- Rationale: These plots compare tsunami and non-tsunami events across depth, magnitude type and multiple earthquake characteristics.
+
+### Determine Whether Earthquake Characteristics Can Predict High-Severity Events
+* Visualisations: Model comparison, confusion matrix and feature importance.  
+- Rationale: These visualisations compare model performance, highlight correct and incorrect predictions, and identify the features contributing most to high-severity classification.
 
 ## Analysis techniques used
 
@@ -232,11 +243,13 @@ effect-size interpretation, model evaluation metrics, the confusion
 matrix and feature importance.
 
 
-## Unfixed Bugs
+## Conclusion
 
-* Please list any unfixed bugs and explain why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+This project explored relationships between earthquake magnitude, depth, tsunami occurrence and high-severity events using EDA, statistical testing and Machine Learning.
+
+The analysis found little practical relationship between magnitude and depth, while depth also showed no significant difference between tsunami and non-tsunami events. In contrast, magnitude type showed a statistically significant association with tsunami occurrence. For high-severity prediction, Random Forest outperformed Logistic Regression, achieving 78.50% accuracy, 76.84% recall and an F1 score of 0.77. However, recall remained below the project's 85% target, indicating that further model development would be required.
+
+Overall, the project demonstrates how statistical analysis, Machine Learning and interactive visualisation can be combined to identify and communicate meaningful patterns within earthquake data.
 
 
 ## Main Data Analysis Libraries
