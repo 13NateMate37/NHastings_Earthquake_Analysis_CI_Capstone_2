@@ -47,7 +47,7 @@ Datasets contain records of 782 earthquakes from 1/1/2001 to 1/1/2023. The meani
 
 
 H1 - Magnitude and Depth
-   * Earthquake magnitude and depth operate as statistically independent features, meaning focal depth cannot serve as an indicator of magnitude when classifying high-severity.
+   * Earthquake magnitude and depth operate as statistically independent features, meaning depth cannot serve as an indicator of magnitude when classifying high-severity.
 
    * Validaiton: 
    
