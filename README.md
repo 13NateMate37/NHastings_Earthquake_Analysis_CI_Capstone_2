@@ -112,9 +112,11 @@ H3 - Classification and Predicitons
 
 * Countplots where used to view the spread of 'magType' and 'tsunami' split. It was slo used used to view thhe relationship between 'magType' and 'tsunami'
 
-* How did you structure the data analysis techniques? Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+* The dataset wasn't limiting in itself. It was my knowledge on the subject how to handle the information within the dataset
+
+* Chatpgt and Gemini were used for ideation and refining which hypotheses I should use. Gemini was used for quick and direct lookup of information relating to subject. Informing me of things like 'Null-island' artifacts, the depth ranges from surface crust to subduction depths.
+
+* Gemini and Co-pilot were used for some of the plotting code and used to guide me through the Machine Learning and model fitting as my own level of implementaion wasn't up to scratch  
 
 ## Dashboard Design (optional)
 
@@ -139,12 +141,22 @@ H3 - Classification and Predicitons
 
 ## Main Data Analysis Libraries
 
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+* Pandas - ETL, EDA, H-testing, ML
+* Numpy - ETL
+* Seaborn - EDA, H-testing, ML
+* Matplotlib - EDA, H-testing, ML
+* Scipy - H-testing
+* Scikitlearn - H-testing, ML
 
 ## Credits
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials; however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section into Content and Media, depending on what you include in your project. 
+* Dataset - https://www.kaggle.com/datasets/warcoder/earthquake-dataset/data - Chirag Chauhan
+
+* Vasi and Rory - Tutors who aided in my understandings and provided feedback for progression
+
+* Friends John & James for explaining mathemtical concepts, providing advice and project format assiatance
+
+* Ai's Chatgpt and Gemini for ideation and direct project support (technical and comprehension)
 
 ### Content 
 
