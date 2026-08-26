@@ -92,8 +92,8 @@ H3 - Classification and Predicitons
 * Dashboard 
 
 ## The rationale to map the business requirements to the Data Visualisations
+THIS NEEDS TO BE DONE
 
-* 
 
 ## Analysis techniques used
 
@@ -156,9 +156,13 @@ H3 - Classification and Predicitons
 
 * Friends John & James for explaining mathemtical concepts, providing advice and project format assiatance
 
-* Ai's Chatgpt and Gemini for ideation and direct project support (technical and comprehension)
+* Ai's Chatgpt and Gemini where use across the length of the project, for ideation and direct project support, both technical (code/methods) and topic comprehension. 
+
+* Code Institutes course notebooks where used for code as well. Having directly used the plotting exmaple from 'Descriptive Statistics Topic 3: Variability'.
 
 ### Content 
+
+DOUBLE CHECK WHAT YOU@RE DOING HERE 
 
 - The text for the Home page was taken from the Wikipedia Article A
 - Instructions on how to implement form validation were taken from a [Specific YouTube Tutorial](https://www.youtube.com/)
@@ -166,8 +170,5 @@ H3 - Classification and Predicitons
 
 ### Media
 
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
+THIS MIGHT NEED TO BE DONE
 
