@@ -120,6 +120,8 @@ THIS NEEDS TO BE DONE
 
 ## Dashboard Design (optional)
 
+DO I STILL NEED THIS IF NOT STREAM LIT?
+
 * Feel free to delete this section if this is a data visualisation only (unit 1 or 2) project submission.
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
 * Later, during project development, you may revisit your dashboard plan to update a feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later you used another plot type).
