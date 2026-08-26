@@ -116,7 +116,11 @@ st.caption(
 st.divider()
 st.subheader(
     """
-    - Magnitude and depth show very little to no linear realtionship.
-    - Tsunami generating events posses very similar characteristics to those that do not.
+    Magnitude and depth show very little to no linear realtionship.
+    """
+)
+st.subheader(
+    """
+    Tsunami generating events posses very similar characteristics to those that do not.
     """
 )

@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 st.title("Earthquake Analysis")
-st.subheader("Earthquake characteristics, tsunami occurrence and severity prediction")
+st.subheader("Earthquake characteristics, tsunami generation and severity prediction")
 
 st.write(
     """
