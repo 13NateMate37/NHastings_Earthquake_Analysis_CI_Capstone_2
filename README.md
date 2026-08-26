@@ -97,9 +97,14 @@ H3 - Classification and Predicitons
 
 ## Analysis techniques used
 
-* Pandas tools (.describe, .info, .dtypes, .usnull etc) whre used for the inspection process for identifying transformations
+* Pandas tools (.describe, .info, .dtypes, .usnull etc) whre used for the inspection process for identifying transformations. Research with AI assistance helped inform the value imputations.
 
-* Engineered features  
+* Features where engineered for the models to have clearer targets to read. 
+
+ - mag_depth_interaction combines two continuous features so the model can check for any linear and non-linear correltaions.
+ - depth_cat groups the depth ranges into categories making for easier an comparision bewteen ranges.
+ - high_severity rule uses a combination of measurments(mmi 7+, sig 875+ and alert of orange-red) with values which depict a high severity event. Tells the model what makes an event high severity.
+    
 
 * For checking distrubutions of 'magnitude' and 'depth' I used histplots for the visuals, marking the first standard deviation ranges and plotted the kde curve, along side a printed aggregated statistial summary
 
