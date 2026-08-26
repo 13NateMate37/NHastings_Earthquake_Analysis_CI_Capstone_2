@@ -5,8 +5,8 @@
 
 # Librairies needed
 
-import pandas
-
+import pandas as pd
+import streamlit as st
 
 def InitialInspect(data_frame):
     """
@@ -55,3 +55,10 @@ def InitialInspect(data_frame):
 #         print("\nValue counts: ")
 #         print([column].value_counts(dropna=False))
 #         print("-" * 50)
+
+
+# Cache for streamlit
+@st.cache_data
+def loadDataframe():
+    dataframe = pd.read_csv("Dataset/Cleaned/earthquake_1995-2023_cleaned.csv")
+    return dataframe
