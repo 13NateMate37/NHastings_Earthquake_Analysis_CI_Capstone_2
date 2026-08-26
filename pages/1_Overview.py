@@ -21,28 +21,28 @@ tsunami_event_total = dataframe["tsunami"].sum()
 high_severity_count = dataframe["high_severity"].sum()
 median_depth = dataframe["depth"].median()
 
-# Storing variables to loop through
-col1, col2, col3, col4 = st.columns(4)
+# Storing variables to visual columns
+Mcol1, Mcol2, Mcol3, Mcol4 = st.columns(4)
 
-with col1:
+with Mcol1:
     st.metric(
         label="Total Event Count",
         value= f"{total_events:,}"
     )
 
-with col2:
+with Mcol2:
     st.metric(
         label="Average Magnitude",
         value= f"{average_magnitude:.2f}"
     )
 
-with col3:
+with Mcol3:
     st.metric(
         label="Maximum Magnitude",
         value= f"{max_magnitude:.1f}"
     )
 
-with col4:
+with Mcol4:
     st.metric(
         label="Median Depth",
         value= f"{max_magnitude:.1f}km"
@@ -71,3 +71,51 @@ st.plotly_chart(
 )
 
 # Magnitude and depth distributions
+# Storing variables to visual columns
+
+md_col1, md_col2 = st.columns(2)
+
+with md_col1:
+    fig_magnitude = px.histogram(
+        dataframe,
+        x="magnitude",
+        nbins=20,
+        title="Magnitude distribution"
+    )
+    fig_magnitude.update_layout(
+        xaxis_title="Magnitude",
+        yaxis_title="Event count"
+    )
+    st.plotly_chart(
+    fig_magnitude,
+    use_container_width=True
+    )
+st.caption(
+    "Magntiude's distribution is skewed to the positive, " \
+    "showing that high severity events happen no where nearly" \
+    " as often as mid and low severity event"
+)
+
+
+
+with md_col2:
+    fig_dpeth = px.histogram(
+        dataframe,
+        x="depth",
+        nbins=30,
+        title="Depth distribution"
+    )
+    fig_dpeth.update_layout(
+        xaxis_title="Depth (Km)",
+        yaxis_title="Event count"
+    )
+    st.plotly_chart(
+    fig_dpeth,
+    use_container_width=True
+    )
+
+    st.caption(
+    "Depth's distribution is heavily skewed to the positive, " \
+    "showing that most events do tend to take place in shallow depths"
+)
+
