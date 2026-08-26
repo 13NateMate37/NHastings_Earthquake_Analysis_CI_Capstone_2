@@ -88,7 +88,7 @@ st.markdown(
 
 st.markdown("### Depth and Tsunami Generation")
 
-h2col1, h2col2, h2col3 = st.coluns(3)
+h2col1, h2col2, h2col3 = st.columns(3)
 
 with h2col1:
     st.metric(
@@ -108,7 +108,7 @@ with h2col3:
 
 st.markdown(
     """
-    Cliff's Delta:** Negligible effact size
+    **Cliff's Delta:** Negligible effact size
     **Interpretation:** The Mann-Whitney U test found no statical significance 
     in depth bewtween tsunami events and non-tsunami events. Cliff's Delta also found 
     depth to have little to no relevance. 
@@ -121,4 +121,62 @@ st.info(
     Earthquake dpeth alone is not a reliable indicator for the event to generate a tsunami. 
     """
 )
+
+st.markdown("### Magnitude Type and Tsunami Generation")
+
+h2acol1, h2acol2 = st.columns(2)
+
+with h2acol1:
+    st.metric(
+        "Chi-square p-value",
+        "< 0.001"
+    ) 
+with h2acol２:
+    st.metric(
+        "Significance Level",
+        "0.05"
+    ) 
+st.markdown(
+    """ 
+    **Interpretation:** The Chi-square test found statistical
+    significance in the association between magnitude type and tsunami generation.
+    As the p-value is below the significance level of 0.05, the null
+    hypothesis of no association is rejected.
+
+    This suggests that tsunami occurrence is not distributed equally
+    across the different magnitude types.
+    """
+)
+st.info(
+    """
+    **Magnitude Type Result:** Statistically significant association
+
+    Magnitude type provides more useful for distinguishing events that do generate 
+    a tsunami rather than the earthquake depth within this dataset.
+    """
+)
+
+st.markdown("### H2 Conclusion")
+
+st.markdown(
+    """
+    The results provide mixed evidence for H2. Earthquake depth showed no
+    statistically significance between tsunami and non-tsunami events. 
+    Meanwhile magnitude type displayed a statistically significant 
+    association with tsunami generation.
+
+    Therefore, magnitude type appears to provide more useful information
+    about tsunami occurrence than earthquake depth within this dataset.
+    """
+)
+st.info(
+    """
+    H2 Result: Partially Supported
+
+    Depth was not significantly different between the groups, while
+    magnitude type showed a significant association with tsunami generation.
+    """
+)
+
+st.divider()
 
