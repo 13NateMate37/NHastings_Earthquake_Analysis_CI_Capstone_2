@@ -3,11 +3,9 @@
 # Earthquake Analysis
 
 **Earthquake Analysis** is an introspective analysis of the thresholds of earthquake events, their classification and 
-which combinations of their features need to be recognised as high severity. 
+which combinations of their features need to be recognised collectively as high severity. 
 
-A high magnitude earthquake doesn't necessarily mean all that much if it happens far away from the surface as the 
-energy is absorbed over the time it travels; a magnitude 4 event happening at a shallow depths could inflict 
-compairable effects to a 7 that was happening deeper down.
+
     
 
 
@@ -49,7 +47,7 @@ Datasets contain records of 782 earthquakes from 1/1/2001 to 1/1/2023. The meani
 
 
 H1 - Magnitude and Depth
-   * Earthquake magnitude and focal depth operate as statistically independent features, meaning focal depth cannot serve as an indicator of magnitude when classifying high-severity.
+   * Earthquake magnitude and depth operate as statistically independent features, meaning focal depth cannot serve as an indicator of magnitude when classifying high-severity.
 
    * Validaiton: 
    
@@ -59,7 +57,7 @@ H1 - Magnitude and Depth
 
 
 H2 - Tsunami Generating Characteristics
-   * Earthquakes that generate a tsunami occur at significantly lower focal depths and are triggered by specific fault mechanisms (magType), as opposed to ones that don't.    
+   * Earthquakes that generate a tsunami occur at significantly lower depths and are triggered by specific fault mechanisms (magType), as opposed to ones that don't.    
 
    * Validation:
    
@@ -81,9 +79,16 @@ H3 - Classification and Predicitons
 
 ## Project Plan
 
-* Outline the high-level steps taken for the analysis.
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
+* ETL - Extract the raw data and inspect it
+      - Identify and apply necssary transformations
+      - Double check and load the edited data into a seperate .csv
+
+* EDA - Explore and visualise the characteristics of the target features 
+      - Identify what methods need to be used in hypothesis testing (Parametric/Non-parametric)
+
+* Testing and ML - Run statistical tests for each hypothesis with visualisation and summary 
+                 - Use an ML model to test high severity event prediction
+                 
 
 
 ## The rationale to map the business requirements to the Data Visualisations
@@ -117,23 +122,7 @@ H3 - Classification and Predicitons
 * What challenges did you face, and what strategies were used to overcome these challenges?
 * What new skills or tools do you plan to learn next based on your project experience? 
 
-## Deployment (optional)
 
-* If this is a Unit 3 Streamlit, Power BI or Tableau Public project, then you can include a link here and explain how you hosted the dashboard.
-
-### Heroku (optional)
-
-* This section is necessary only if you are deploying a Streamlit app to Heroku as part of your submission for units 2 and 3. 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
 
 ## Main Data Analysis Libraries
 
@@ -157,20 +146,3 @@ H3 - Classification and Predicitons
 
 
 
-## Acknowledgements (optional)
-
-* Thank the people who supported this project.
-
-
-## Deployment Reminders
-
-* The `.python-version`, `.slugignore`, `Procfile` and `setup.sh` files are necessary only if you are deploying a Streamlit app to Heroku as part of your submission for units 2 and 3. 
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack, currently supported version that most closely matches what you used in this project.
-* The project can be deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. At the **Deploy** tab, select **GitHub** as the deployment method.
-3. Select your repository name and click **Search**. Once it is found, click **Connect**.
-4. Select the branch you want to deploy, then click **Deploy Branch**.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button **Open App** at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
