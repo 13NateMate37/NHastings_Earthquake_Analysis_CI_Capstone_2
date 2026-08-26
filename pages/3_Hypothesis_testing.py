@@ -180,3 +180,131 @@ st.info(
 
 st.divider()
 
+st.subheader("H3: High Severity Earthquake Prediction")
+
+st.markdown(
+    """
+    **Hypothesis:** Machine learning models that are trained solely on the immediate, 
+    real-time seismic traits (magnitude, depth, latitude, longitude, magType) can 
+    accurately classify high severity events before the crowdsourced data becomes available. 
+    Resulting in swifter repsonse allocation
+
+
+    Two classification models were evaluated:
+    **Logistic Regression**
+    **Random Forest**
+    
+    The project defined recall of at least **85%** the target for
+    successful identification of high-severity events.
+    """
+)
+
+h3col1, h3col2, h3col3 = st.columns(3)
+
+with h3col1:
+    st.metric(
+        "Logistic Regression Recall",
+        "61.05%"
+    ) 
+with h3col２:
+    st.metric(
+        "Random Forest Recall",
+        "76.84%"
+    ) 
+with h3col3:
+    st.metric(
+        "Target Recall",
+        "85%"
+    ) 
+
+model_results = pd.DataFrame({
+    "Model": [
+        "Logistic Regression",
+        "Random Forest"
+    ],
+    "Accuracy": [
+        68.50,
+        78.50
+    ],
+    "Recall": [
+        61.05,
+        76.84
+    ],
+    "F1 Score": [
+        65.00,
+        77.00
+    ]
+})
+
+st.markdown("### Model Performance")
+st.dataframe(
+    model_results,
+    hide_index=True,
+    use_container_width=True
+)
+
+model_res_plot = model_results.melt(
+    id_vars="Model",
+    var_name="Metric",
+    value_name="Score"
+)
+
+fig_model_res = px.bar(
+    model_res_plot,
+    x="Metric",
+    y="Score",
+    color="Model",
+    barmode="group",
+    title="Model Performance Comparison"
+)
+
+fig_model_res.update_layout(
+    xaxis_title="Performance Metric",
+    yaxis_title="Score (%)",
+    legend_title="Model"
+)
+
+st.plotly_chart(
+    fig_model_res,
+    use_container_width=True,
+    key="hypothesis_model_comparison"
+)
+
+st.markdown(
+    """
+    **Why recall matters:** Recall measures how many of the actual
+    high-severity earthquakes the model successfully identifies.
+
+    A lower recall means that more genuinely high-severity events are
+    incorrectly classified as non-high-severity events. For this reason,
+    recall was selected as the primary performance measure for this
+    prediction task.
+    """
+)
+
+st.markdown("### H3 Conclusion")
+
+st.markdown(
+    """
+    Random Forest produced the strongest overall performance, achieving
+    78.50% accuracy, 76.84% recall and an F1 score of 0.77. This
+    outperformed Logistic Regression, which achieved 68.50% accuracy,
+    61.05% recall and an F1 score of 0.65.
+
+    Although the Random Forest model demonstrated predictive ability,
+    its recall of 76.84% remained below the project's required
+    target of 85%.
+
+    Therefore, the model demonstrates predictive potential but does not
+    currently meet the project's defined performance requirement.
+    """
+)
+
+st.warning(
+    """
+    H3 Result: Target Not Achieved
+
+    Random Forest was the strongest model but achieved 76.84% recall,
+    falling short of the required 85% recall target.
+    """
+)
