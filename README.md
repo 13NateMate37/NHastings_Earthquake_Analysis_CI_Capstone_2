@@ -88,17 +88,25 @@ H3 - Classification and Predicitons
 
 * Testing and ML - Run statistical tests for each hypothesis with visualisation and summary 
                  - Use an ML model to test high severity event prediction
-                 
 
+* Dashboard 
 
 ## The rationale to map the business requirements to the Data Visualisations
 
-* List your business requirements and a rationale for mapping them to the Data Visualisations
-
+* 
 
 ## Analysis techniques used
 
-* List the data analysis methods used and explain limitations or alternative approaches.
+* Pandas tools (.describe, .info, .dtypes, .usnull etc) whre used for the inspection process for identifying transformations
+
+* Engineered features  
+
+* For checking distrubutions of 'magnitude' and 'depth' I used histplots for the visuals, marking the first standard deviation ranges and plotted the kde curve, along side a printed aggregated statistial summary
+
+* Scatterplots where used to inspect what relationship 'magnitude' and 'depth' have, then coloured it by 'mmi' to view if they corrrelate to high severity    
+
+* Countplots where used to view the spread of 'magType' and 'tsunami' split. It was slo used used to view thhe relationship between 'magType' and 'tsunami'
+
 * How did you structure the data analysis techniques? Justify your response.
 * Did the data limit you, and did you use an alternative approach to meet these challenges?
 * How did you use generative AI tools to help with ideation, design thinking and code optimisation?
