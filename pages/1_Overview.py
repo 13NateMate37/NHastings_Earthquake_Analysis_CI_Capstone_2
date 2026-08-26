@@ -20,7 +20,10 @@ max_magnitude = dataframe["magnitude"].max()
 tsunami_event_total = dataframe["tsunami"].sum()
 high_severity_count = dataframe["high_severity"].sum()
 median_depth = dataframe["depth"].median()
+tsunami_pct = (tsunami_event_total / total_events *100)
+high_severity_pct = (high_severity_count / total_events *100
 
+                     )
 # Storing variables to visual columns
 Mcol1, Mcol2, Mcol3, Mcol4 = st.columns(4)
 
@@ -90,7 +93,7 @@ with md_col1:
     fig_magnitude,
     use_container_width=True
     )
-st.caption(
+    st.caption(
     "Magntiude's distribution is skewed to the positive, " \
     "showing that high severity events happen no where nearly" \
     " as often as mid and low severity event"
@@ -119,3 +122,15 @@ with md_col2:
     "showing that most events do tend to take place in shallow depths"
 )
 
+st.divider()
+st.subheader("Key overview and findings")
+st.markdown(
+    f"""
+- The dataset contains **{total_events:,} events**.
+- The average recorded magnitude is **{average_magnitude:.2f}**.
+- The max recorded magnitude is **{max_magnitude:.1f}**.
+-  **{tsunami_event_total:,}** Tsunami events.
+- **{high_severity_count:,}** events classed as high severity.
+- Median recorded depth of **{median_depth:.1f}km**
+"""
+)
